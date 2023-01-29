@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 // require("./timeout-example");
 // require("./interval-example");
 // require("./requests-example");
 
-require("./promise-all-not-supported-example");
+require('./src/promise-any-not-supported-example');

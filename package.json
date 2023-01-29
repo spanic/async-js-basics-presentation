@@ -4,15 +4,27 @@
   "description": "Node.js playground",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "serve": "nodemon",
+    "start": "node index.js",
+    "start-es5": "node dist/bundle.es5.js",
+    "build": "source $HOME/.nvm/nvm.sh; nvm use system; rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
   },
   "dependencies": {
+    "core-js": "^3.27.2",
     "promise-any-polyfill": "^1.0.1",
     "promise-polyfill": "^8.2.3",
     "promise.any": "^2.0.5",
